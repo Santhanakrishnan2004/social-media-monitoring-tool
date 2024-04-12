@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/twitter.css') }}">
+</head>
+<body>
+    <div class="twitter-symbol">&#128172;</div>
+    <h1>Twitter Data</h1>
+    <table>
+        <tr>
+            <th>Timestamp</th>
+            <th>Username</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Following Count</th>
+            <th>Follower Count</th>
+            <th>Total Tweets</th>
+            <th>Retweet Count</th>
+            <th>Tweet Text</th>
+            <th>Hashtags Used</th>
+        </tr>
+        {% for tweet in tweets %}
+        <tr>
+            <td>{{ tweet.timestamp }}</td>
+            <td>{{ tweet.username }}</td>
+            <td>{{ tweet.description }}</td>
+            <td>{{ tweet.location }}</td>
+            <td>{{ tweet.following }}</td>
+            <td>{{ tweet.followers }}</td>
+            <td>{{ tweet.totaltweets }}</td>
+            <td>{{ tweet.retweetcount }}</td>
+            <td>{{ tweet.text }}</td>
+            <td>
+                <ul>
+                    {% for hashtag in tweet.hashtags %}
+                    <li>{{ hashtag }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

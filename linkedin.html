@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Jobs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/linkedin.css') }}">
+</head>
+<body>
+    <h1>LinkedIn Job Listings</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Job Title</th>
+                <th>Level</th>
+                <th>Hashtags</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in data %}
+                <tr>
+                    <td>{{ job.company }}</td>
+                    <td>{{ job["job-title"] }}</td>
+                    <td>{{ job.level }}</td>
+                    <td>{{ job.hashtags|join(", ") }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

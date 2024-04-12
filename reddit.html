@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reddit Posts</title>
+    <!-- Inside <head> tag -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='reddit.css') }}">
+
+</head>
+<body>
+    <h1>Reddit Posts</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Score</th>
+            <th>ID</th>
+            <th>Subreddit</th>
+            <th>URL</th>
+            <th>Number of Comments</th>
+            <th>Body</th>
+            <th>Created</th>
+        </tr>
+        {% for post in posts %}
+        <tr>
+            <td>{{ post[0] }}</td>
+            <td>{{ post[1] }}</td>
+            <td>{{ post[2] }}</td>
+            <td>{{ post[3] }}</td>
+            <td>{{ post[4] }}</td>
+            <td>{{ post[5] }}</td>
+            <td>{{ post[6] }}</td>
+            <td>{{ post[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+          <li><a href="{{ url_for('createaccount') }}">create a account</a></li>
+
+        </ul>
+      </div>
+    </nav>
+    <h1 class="logo">The Achievers<br>Social Media Monitoring Tool</h1>
+    <div class="card-container">
+      <div class="card">
+        <h2>Twitter Controller</h2>
+        <p>Twitter controller is used for monitoring Twitter by searching a particular keyword ,it returns datas which are collected </p>
+        <form action="{{ url_for('twitter') }}" method="POST">
+          <input type="text" name="card1" placeholder="Enter keyword for Card 1" required>
+          <button type="submit" name="card1">Submit</button>
+        </form>
+      </div>
+      <div class="card">
+        <h2>Reddit Controller</h2>
+        <p>Reddit controller is used for monitoring reddit by searching a particular keyword or subreddit ,it returns datas which are collected</p>
+        <form method="POST">
+          <input type="text" name="card2" placeholder="Enter keyword for Card 2" required>
+          <button type="submit" name="card2">Submit</button>
+        </form>
+      </div>
+      <div class="card">
+        <h2>Linkedin Controller</h2>
+        <p>linkedin controller is used for monitoring linkedin by searching a particular keyword or job-title the dat will be shown</p>
+        <form action="/linkedin" method="POST">
+          <input type="text" name="card3" placeholder="Enter keyword">
+          <button type="submit">Search</button>
+      </form>
+        </form>
+      </div>
+    </div>
+    
+    <div class="info">
+      <h3>Why Social Media Monitoring Tool?</h3>
+<p>Social media monitoring tools are essential for any individual or business looking to build and maintain a strong online presence. These tools allow you to track, analyze, and respond to online conversations about your brand or industry, giving you valuable insights into customer sentiment and feedback. By monitoring social media activity, you can identify potential issues, track the success of your marketing campaigns, and engage with your audience in real-time. With so much information being shared on social media platforms, a monitoring tool is necessary to efficiently manage and respond to this information, helping you to stay competitive and relevant in today's digital age.</p>
+</div>
+<div class="line"></div>
+
+
+  </body>
+  
+  
+</html>
+

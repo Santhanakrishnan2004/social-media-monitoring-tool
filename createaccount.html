@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/createaccount.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Account</h1>
+        <form action="/register" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Create Account">
+        </form>
+    </div>
+</body>
+</html>
