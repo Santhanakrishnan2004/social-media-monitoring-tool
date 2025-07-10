@@ -39,15 +39,7 @@ def tweet_extraction(api, keyword, date_since=None, num_tweets=100):
     for tweet in tweets:
         tweet_data.append(print_tweet_data(len(tweet_data) + 1, tweet))
 
-    return tweet_data
 
-if __name__ == '__main__':
-    # Enter your own credentials obtained
-    # from your developer account
-    consumer_key = "QwIUrhUcRJXQfXzBcxZbdAFjn"
-    consumer_secret = "bkjd0Wm3bGUaxZeW1T4Z8teFPeclKquMmO51O19UbNaREH6jFK"
-    access_key = "1590364288673538050-UtvTI0R7o4acaVS0ZSYPz3VV9yGLT4"
-    access_secret = "EnvzvkBpTBfCMpSGq1CjvQsTpw4Lnm0XKI6d90HH3Y5wx"
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_key, access_secret)
@@ -112,10 +104,10 @@ def tweet_extraction(api, keyword, date_since=None, num_tweets=100):
 if __name__ == '__main__':
     # Enter your own credentials obtained
     # from your developer account
-    consumer_key = "QwIUrhUcRJXQfXzBcxZbdAFjn"
-    consumer_secret = "bkjd0Wm3bGUaxZeW1T4Z8teFPeclKquMmO51O19UbNaREH6jFK"
-    access_key = "1590364288673538050-UtvTI0R7o4acaVS0ZSYPz3VV9yGLT4"
-    access_secret = "EnvzvkBpTBfCMpSGq1CjvQsTpw4Lnm0XKI6d90HH3Y5wx"
+    consumer_key = ""
+    consumer_secret = ""
+    access_key = ""
+    access_secret = ""
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_key, access_secret)
